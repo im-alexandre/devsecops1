@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+/semgrep-report.zip
+/semgrep.json
+/semgrep.json

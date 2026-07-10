@@ -4,10 +4,10 @@ app = Flask(__name__)
 
 
 @app.get("/clientes")
+def listar_clientes():
 """
 Esta rota serve para listar os clientes
 """
-def listar_clientes():
     return jsonify(
         [
             {"id": 1, "nome": "Ana Lima", "email": "ana@example.com"},
