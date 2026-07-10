@@ -3,7 +3,7 @@ name: sast
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   semgrep:
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.13.x"
       - run: python -m pip install semgrep
       - run: semgrep scan --config p/owasp-top-ten --json --output semgrep.json
       - uses: actions/upload-artifact@v4
